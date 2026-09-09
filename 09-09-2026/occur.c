@@ -1,9 +1,9 @@
 //code by madhur 09-09-2026
 #include<stdio.h>
 int main(){
-	//storing in artrays
+	//storing in arrays
 	char a[43],b[4];
-// Taking input for word and characxter
+// Taking input for word and character
 	printf("Enter word:");
 	scanf("%[^\n]",a);
 	printf("\n Enter char");
@@ -16,6 +16,6 @@ int main(){
 			k+=1;
 		}
 	}
-	//printinbg occurences
+	//printing occurences
 	printf("Occurences :%d\n",k);
 }
