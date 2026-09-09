@@ -5,7 +5,7 @@ int main(){
 	char a[43],b[4];
 // Taking input for word and characxter
 	printf("Enter word:");
-	scanf("%42s",a);
+	scanf("%[^\n]",a);
 	printf("\n Enter char");
 	scanf("%2s",b);
 	printf("%c\n",b[0]);
