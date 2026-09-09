@@ -13,9 +13,10 @@ int main(){
 	int k=0;
 	for(int i=0;i<43;i++){
 		if(a[i]==b[0]){
-			k+=1;
+			break;
 		}
+		k+=1;
 	}
-	//printing occurences
-	printf("Occurences :%d\n",k);
+	//printing occurence
+	printf(" first Occurence :%d\n",k+1);//K+1 because string index starts at zero 
 }
