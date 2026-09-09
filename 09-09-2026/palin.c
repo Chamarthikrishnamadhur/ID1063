@@ -3,7 +3,7 @@
 #include<stdio.h>
 #define lt 43 //length of string
 //function to check palindrome
-int palindrome(char *a){
+void palindrome(char *a){
 	//checking length
 	int len=0;
 	for (int i=0;i<lt;i++){
@@ -17,21 +17,20 @@ int palindrome(char *a){
 	for (int i=0;i<=len;i++){
 		if(a[i]!=a[len-i]){
 			printf("Not a plaindrome\n");
-			return 0;
+			return ;//breaks function
 		}
 	}
 
 	printf("Palindrome\n");
-	return 0;
+	return ;//breaks function
 }
 int main(void){
 	//taking input
 	char a[lt];
-	int b;
 	for(int i=0;i<lt;i++){
 		a[i]='\0';
 	}
 	printf("Enter the name:");
 	scanf("%[^\n]",a);
-	b=palindrome(a);//taking the return 0
+	palindrome(a);
 }
