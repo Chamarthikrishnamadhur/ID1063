@@ -1,10 +1,11 @@
 //code by madhur 09-09-2026
 #include<stdio.h>
+#define length 43 //max name length
 //function to check occurence
-int occur(char *a, char *b){
+int occur(char *a, char b){
 	int k=0;
-	for(int i=0;i<43;i++){
-                  if(a[i]==b[0]){
+	for(int i=0;i<length;i++){
+                  if(a[i]==b){
                           return k;
                   }
                   k+=1;          
@@ -14,13 +15,17 @@ int occur(char *a, char *b){
 }
 int main(){
 	//storing in arrays
-	char a[43],b[4];
+	char a[length];
+	char b='i';
+	char c;
 // Taking input for word and character
 	printf("Enter word:");
 	scanf("%[^\n]",a);
+	c=getchar();
 	printf("\n Enter char");
-	scanf("%2s",b);
-	//printf("%c\n",b[0]);
+	scanf("%c",&b);
+	c=getchar();
+	printf("%c\n",b);
 	//counting occurences 
 	/*int k=0;
 	for(int i=0;i<43;i++){
