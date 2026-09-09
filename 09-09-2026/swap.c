@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main(){
 	char a[43];
+	printf("Enter word\n")
 	scanf("%42s",a);
 	char temp='l';
 	temp=a[0];
