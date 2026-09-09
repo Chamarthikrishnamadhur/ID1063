@@ -8,7 +8,7 @@ int main(){
 	scanf("%[^\n]",a);
 	printf("\n Enter char");
 	scanf("%2s",b);
-	printf("%c\n",b[0]);
+	//printf("%c\n",b[0]);
 	//counting occurences 
 	int k=0;
 	for(int i=0;i<43;i++){
