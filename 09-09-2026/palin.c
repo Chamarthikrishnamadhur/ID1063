@@ -21,6 +21,7 @@ int palindrome(char *a){
 	}
 
 	printf("Palindrome\n");
+	return 0;
 }
 int main(void){
 	//taking input
