@@ -2,7 +2,7 @@
 //coded on 09-09-2026
 #include<stdio.h>
 #include<stdlib.h>
-#define len 43 //max string length
+
 
 //main function
 int main(){
