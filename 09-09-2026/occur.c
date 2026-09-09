@@ -1,5 +1,6 @@
 //code by madhur 09-09-2026
 #include<stdio.h>
+//function to check occurence
 int occur(char *a, char *b){
 	int k=0;
 	for(int i=0;i<43;i++){
@@ -8,7 +9,7 @@ int occur(char *a, char *b){
                   }
                   k+=1;          
 	}
-	return k;
+	return k;//occurence-1 list index
 }
 int main(){
 	//storing in arrays
