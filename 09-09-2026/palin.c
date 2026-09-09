@@ -1,6 +1,7 @@
-//Madhur 09-09-2026
+//Madhur 
+//coded on 09-09-2026
 #include<stdio.h>
-#define lt 43
+#define lt 43 //length of string
 //function to check palindrome
 int palindrome(char *a){
 	//checking length
@@ -12,7 +13,7 @@ int palindrome(char *a){
 		}
 	}
 	len=len-1;
-	//printf("%d\n",len);
+	//checks for palindrome
 	for (int i=0;i<=len;i++){
 		if(a[i]!=a[len-i]){
 			printf("Not a plaindrome\n");
@@ -32,5 +33,5 @@ int main(void){
 	}
 	printf("Enter the name:");
 	scanf("%[^\n]",a);
-	b=palindrome(a);
+	b=palindrome(a);//taking the return 0
 }
