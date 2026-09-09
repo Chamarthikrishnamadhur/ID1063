@@ -5,11 +5,12 @@ int occur(char *a, char *b){
 	int k=0;
 	for(int i=0;i<43;i++){
                   if(a[i]==b[0]){
-                          break;
+                          return k;
                   }
                   k+=1;          
 	}
-	return k;//occurence-1 list index
+	//occurence-1 list index
+	return -2;
 }
 int main(){
 	//storing in arrays
