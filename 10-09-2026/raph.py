@@ -20,6 +20,7 @@ plt.grid()
 for i in range (20):
     plt.plot(x,func(x),"o")
     x=raph(x)
+print("RAPHSON gave",x)
 #solving using sympy
 X=sp.symbols("X")
 wq=sp.Eq(sp.exp(X),2)

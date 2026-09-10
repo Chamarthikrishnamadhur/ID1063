@@ -5,8 +5,9 @@ double raph(double x){
 }
 int main(){
 	double x=1;
-	for (int i=0;i<10;i++){
+	for (int i=0;i<20;i++){
 		printf("%lf\n",x);
 		x=raph(x);
 	}
+	printf("Newton raphson gave %lf\n",x)
 }
