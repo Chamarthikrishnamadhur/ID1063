@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 double raph(double x){
-	return (x-(exp(x)/(exp(x)-2)));
+	return (x-((exp(x)-2)/(exp(x))));
 }
 int main(){
 	double x=1;
