@@ -13,6 +13,19 @@ import numpy as np
 import shlex
 import subprocess
 import matplotlib.pyplot as plt
+def line_dir_pt(m,A,k1,k2):
+    len = 10
+    dim = A.shape[0]
+    x_AB = np.zeros((dim,len))
+    lam_1 = np.linspace(k1,k2,len)
+    for i in range(len):
+        temp1 = A + lam_1[i]*m
+        x_AB[:,i]= temp1.T
+    return x_AB
+
+
+# Fallback chhttps://raw.githubusercontent.com/Chamarthikrishnamadhur/ID1063/refs/heads/master/10-09-2026/sol.pyeck if the residuals array returns empty
+# Fallback check if the residuals array returns empty
 # A singular matrix (rows are linearly dependent)
 A = np.array([[2, 3],
 
@@ -30,20 +43,20 @@ x_lstsq, residuals, rank, s = np.linalg.lstsq(A, b, rcond=None)
 print("Rank is",rank)
 print("Solution via lstsq:", x_lstsq)
 print("The above code gives one out of the infinfite possible solutions")
-error=np.sum((np.dot(A,x_lstsq)-b)**2)
+error=np.sum(((A@x_lstsq)-b)**2)
 print("The error is zero",error)
 k=int(input("Enter number other than 4: "))
 b=np.array([6,3*k])
 x_lstsq,residuals,rank,s=np.linalg.lstsq(A,b,rcond=None)
 #print(residuals)
 #if the error is noinzero, the solution dosent exist
-error = np.sum((np.dot(A, x_lstsq) - b) ** 2)
+error = np.sum(((A@ x_lstsq) - b) ** 2)
 #print("The error is ",error)
 if not np.isclose(error, 0):
     print(f"No exact solution exists. Calculated squared error: {error}")
 x=np.linspace(0,100,10000)
 y=2-(2/3)*x
-y1=(3*k-4*x)/6
+y1=line_dir_pt(-2/3,x,0,10)
 plt.plot(x,y,color='blue',label='old eq1')
 plt.plot(x,y1,color='green',label='old eq2')
 k=int(input("Enter other than 4 and 0 ") )
