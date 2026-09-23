@@ -16,7 +16,7 @@ void pixel(int m,int n,int a[][n], int t){
 		}
 		printf("\n");
 	}
-
+//taking rows and cols and threshold
 }
 int main(){
 	int m,n,t;
