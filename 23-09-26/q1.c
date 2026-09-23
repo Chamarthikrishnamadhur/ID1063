@@ -1,5 +1,9 @@
+//code by madhur
+//on 23-09-26
 #include<stdio.h>
+//use -lm
 #include<math.h>
+//squares and adds and returns the root mean
 double rms(double *a, int n){
 	double sum=0;
 	for (int i=0;i<n;i++){
