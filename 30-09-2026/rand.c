@@ -18,7 +18,7 @@ fclose(fp);
 }
 
 
-void binaryVector(int n)
+int binaryVector(int n)
 {
     double x;
 
@@ -32,9 +32,9 @@ void binaryVector(int n)
     {
         fscanf(fp, "%lf", &x);
 
-        printf("%0.1lf ",x);
+        return (int)x;
     }
-    printf("\n");
+    //printf("\n");
 
     
     fclose(fp);
@@ -45,5 +45,24 @@ int main(){
 	printf("Enter n ");
 	int n;
 	scanf("%d",&n);
-	binaryVector(n);
+	int a[n];
+	for(int i=0;i<n;i++){
+	a[i]=binaryVector(1);
+	}
+	int min=100;
+	for(int i=0;i<n;i++){
+		if(a[i]<min){
+			min=a[i];
+		}
+	}
+	printf("%d\n",min);
+	for(int i=0;i<n;i++){
+		if(a[i]==min){
+			a[i]=0;
+		}
+	}
+	for(int i=0;i<n;i++){
+		printf("%d ",a[i]);
+		}
+	printf("\n");
 }
