@@ -11,7 +11,7 @@ fp = fopen(str,"w");
 //Generate numbers
 for (i = 0; i < len; i++)
 {
-fprintf(fp,"%lf\n",(double)rand()/RAND_MAX);
+fprintf(fp,"%lf\n",(double)(rand()%100+1));
 }
 fclose(fp);
 
@@ -32,10 +32,7 @@ void binaryVector(int n)
     {
         fscanf(fp, "%lf", &x);
 
-        if (x < 0.5)
-            printf("0");
-        else
-        printf("1");
+        printf("%0.1lf ",x);
     }
     printf("\n");
 
